@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "name": "Idk",
+  "canvas": {
+    "width": 1280,
+    "height": 720
+  },
+  "grid": {
+    "enabled": true,
+    "snap": true,
+    "size": 20
+  },
+  "soundsEnabled": true,
+  "mute": {
+    "x": 1200,
+    "y": 24,
+    "size": 56,
+    "rotation": 0,
+    "bgColor": "#111111",
+    "bgOpacity": 0.6,
+    "iconColor": "#FFFFFF",
+    "autoContrast": true,
+    "radius": 50,
+    "keyframes": {}
+  },
+  "assets": [],
+  "games": [],
+  "pages": [
+    {
+      "id": "k1g8lmwx",
+      "name": "Home",
+      "type": "page",
+      "bgColor": "#1E1B4B",
+      "bgImage": null,
+      "bgSize": "cover",
+      "bgPosition": "center",
+      "overlayColor": "#000000",
+      "overlayOpacity": 0,
+      "music": null,
+      "musicVolume": 0.6,
+      "duration": 5,
+      "loop": false,
+      "keyframes": {},
+      "elements": [
+        {
+          "id": "l6hhtayt",
+          "type": "shape",
+          "x": 860,
+          "y": 150,
+          "w": 320,
+          "h": 320,
+          "rotation": 0,
+          "scale": 1,
+          "opacity": 0.85,
+          "hidden": false,
+          "keyframes": {
+            "fill": [
+              {
+                "id": "vvgu0rqo",
+                "t": 0,
+                "v": "#7C3AED",
+                "ease": "linear"
+              },
+              {
+                "id": "3g2kjoji",
+                "t": 2.5,
+                "v": "#EC4899",
+                "ease": "linear"
+              },
+              {
+                "id": "voratzye",
+                "t": 5,
+                "v": "#7C3AED",
+                "ease": "linear"
+              }
+            ]
+          },
+          "fontFamily": "Inter, sans-serif",
+          "bold": false,
+          "italic": false,
+          "letterSpacing": 0,
+          "lineHeight": 1.2,
+          "name": "Glow circle",
+          "shape": "circle",
+          "fill": "#7C3AED",
+          "filled": true,
+          "borderColor": "#111111",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "text": "",
+          "fontSize": 20,
+          "align": "center",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "80vt8vvh",
+          "type": "text",
+          "x": 120,
+          "y": 220,
+          "w": 760,
+          "h": 110,
+          "rotation": 0,
+          "scale": 1,
+          "opacity": 1,
+          "hidden": false,
+          "keyframes": {
+            "x": [
+              {
+                "id": "h8o4u8ch",
+                "t": 0,
+                "v": 40,
+                "ease": "ease-out"
+              },
+              {
+                "id": "jb3bmf5g",
+                "t": 1.2,
+                "v": 120,
+                "ease": "linear"
+              }
+            ],
+            "color": [
+              {
+                "id": "zss3vver",
+                "t": 0,
+                "v": "#A594F9",
+                "ease": "ease-in-out"
+              },
+              {
+                "id": "j60ru3in",
+                "t": 1.2,
+                "v": "#F5F3FF",
+                "ease": "linear"
+              }
+            ]
+          },
+          "fontFamily": "Inter, sans-serif",
+          "bold": true,
+          "italic": false,
+          "letterSpacing": 0,
+          "lineHeight": 1.2,
+          "name": "Headline",
+          "text": "Idk",
+          "fontSize": 72,
+          "align": "left",
+          "color": "#F5F3FF"
+        },
+        {
+          "id": "mwn30cxq",
+          "type": "text",
+          "x": 124,
+          "y": 340,
+          "w": 620,
+          "h": 60,
+          "rotation": 0,
+          "scale": 1,
+          "opacity": 1,
+          "hidden": false,
+          "keyframes": {},
+          "fontFamily": "Inter, sans-serif",
+          "bold": false,
+          "italic": false,
+          "letterSpacing": 0,
+          "lineHeight": 1.2,
+          "name": "Subtitle",
+          "text": "Built visually. Exported as a real website.",
+          "fontSize": 24,
+          "align": "left",
+          "color": "#C4B5FD"
+        },
+        {
+          "id": "9wg0i4vl",
+          "type": "button",
+          "x": 124,
+          "y": 430,
+          "w": 200,
+          "h": 60,
+          "rotation": 0,
+          "scale": 1,
+          "opacity": 1,
+          "hidden": false,
+          "keyframes": {},
+          "fontFamily": "Inter, sans-serif",
+          "bold": true,
+          "italic": false,
+          "letterSpacing": 0,
+          "lineHeight": 1.2,
+          "name": "Start button",
+          "text": "Get started",
+          "fontSize": 18,
+          "align": "center",
+          "color": "#1E1B4B",
+          "fill": "#FACC15",
+          "borderColor": "#4B3AA0",
+          "borderWidth": 0,
+          "borderRadius": 10,
+          "hover": "darken",
+          "action": {
+            "type": "none"
+          },
+          "clickSound": null
+        }
+      ]
+    }
+  ],
+  "branches": [],
+  "editorSettings": {}
+}
