@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flash Game Arcade</title>
+    <!-- Load the Ruffle Flash Emulator -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        .arcade-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .game-list {
+            flex: 1;
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .game-item {
+            padding: 12px;
+            background: #2a2a2a;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+            border: 1px solid #333;
+        }
+        .game-item:hover {
+            background: #ffcc00;
+            color: #000;
+            font-weight: bold;
+        }
+        .game-stage {
+            flex: 3;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+        #player-container {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            background: #000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #game-title {
+            margin-top: 0;
+            color: #ffcc00;
+        }
+        .placeholder-text {
+            color: #666;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🕹️ Flash Game Arcade 🕹️</h1>
+    <p>Select a game from the list below to start playing instantly via Ruffle.</p>
+
+    <div class="arcade-container">
+        <!-- Sidebar Game Selector -->
+        <div class="game-list">
+            <h3>Select a Game</h3>
+            
+            <!-- ADD YOUR GAMES HERE. Update data-swf with your exact filename -->
+            <div class="game-item" data-swf="games/super_mario.swf" onclick="loadGame(this)">Super Mario Flash</div>
+            <div class="game-item" data-swf="games/pacman.swf" onclick="loadGame(this)">Pac-Man</div>
+            <div class="game-item" data-swf="games/sonic.swf" onclick="loadGame(this)">Sonic the Hedgehog</div>
+            
+        </div>
+
+        <!-- Main Game Window -->
+        <div class="game-stage">
+            <h2 id="game-title">Welcome</h2>
+            <div id="player-container">
+                <p class="placeholder-text" id="placeholder">Choose a game from the left menu to begin playing!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadGame(element) {
+            const swfUrl = element.getAttribute('data-swf');
+            const title = element.innerText;
+            
+            // Update the header title
+            document.getElementById('game-title').innerText = title;
+            
+            const container = document.getElementById('player-container');
+            container.innerHTML = ''; // Clear existing game or text
+
+            // Initialize Ruffle player instance
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            
+            player.style.width = "100%";
+            player.style.height = "100%";
+            
+            container.appendChild(player);
+            
+            // Load the SWF asset path
+            player.load({
+                url: swfUrl,
+                allowScriptAccess: true
+            });
+        }
+    </script>
+</body>
+</html>
